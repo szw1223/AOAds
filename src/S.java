@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class S {
-    public static int kWeakestRows(int[] nums) {
+    public int kWeakestRows(int[] nums) {
 //        List<List<Integer>> results = new ArrayList<List<Integer>>();
 
         int left = 0;
@@ -106,8 +106,9 @@ public class S {
 //        int[][] mat1 = new int[][] {{1,1,0,0,0},{1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}};
 //        int k1 = 3;
         int [] mat1 = new int[] {3,4,5,6,7,1,2};
-        int hh = kWeakestRows(mat1);
-        System.out.println(hh);
+        int hh = 0;
+        S myTest = new S();
+        System.out.println(myTest.kWeakestRows(mat1));
 //        for (int i = 0; i < hh.length; i++) {
 //            System.out.println(hh);
 //        }
