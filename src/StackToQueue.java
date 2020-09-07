@@ -39,15 +39,14 @@ public class StackToQueue {
         StackToQueue stacki = new StackToQueue();
         stacki.push(1);
         stacki.push(13);
-        stacki.pop();
-        stacki.pop();
-        stacki.empty();
-
+        System.out.println(stacki.pop());
+        System.out.println(stacki.pop());
+        System.out.println(stacki.empty());
         stacki.push(12);
         stacki.push(3);
         stacki.push(43);
-        while (!stacki.empty()) {
-            System.out.println(stacki.pop());
-        }
+//        while (!stacki.empty()) {
+//            System.out.println(stacki.pop());
+//        }
     }
 }
