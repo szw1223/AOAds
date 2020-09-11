@@ -1,8 +1,8 @@
 import java.util.Stack;
 
 public class StackToQueue {
-    private Stack<Integer> a;
-    private Stack<Integer> b;
+    public Stack<Integer> a;
+    public Stack<Integer> b;
 
     public StackToQueue() {
         a = new Stack<>();
@@ -45,6 +45,7 @@ public class StackToQueue {
         stacki.push(12);
         stacki.push(3);
         stacki.push(43);
+        System.out.println(stacki.peek());
 //        while (!stacki.empty()) {
 //            System.out.println(stacki.pop());
 //        }
