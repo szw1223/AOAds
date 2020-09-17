@@ -5,7 +5,7 @@ import java.util.List;
 public class S {
     public int kWeakestRows(int[] nums) {
 //        List<List<Integer>> results = new ArrayList<List<Integer>>();
-// be carefulsadfsad
+// 太可怕了
         int left = 0;
         int mid = 0;
         int right = nums.length - 1;
