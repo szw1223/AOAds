@@ -69,6 +69,28 @@ public class sorting {
         return result.toArray(new int[0][0]);
     }
 
+    public int[] selectionSort(int [] arr) {
+        if (arr == null || arr.length <= 1) {
+            return arr;
+        }
+        for (int i = 0; i < arr.length; i ++) {
+            int maxIndex = 0;
+            for (int j = i; j < arr.length; j ++) {
+                if (arr[i] < arr[maxIndex]) {
+                    maxIndex = i;
+                }
+            }
+            swap(arr, i, maxIndex);
+        }
+        return arr;
+    }
+
+    private void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
     public static void main(String[] args){
 //        int[][] mat1 = new int[][] {{1,1,0,0,0},{1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}};
 ////        int k1 = 3;
