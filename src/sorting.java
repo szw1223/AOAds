@@ -91,6 +91,45 @@ public class sorting {
         array[j] = temp;
     }
 
+    public int [] mergeSort(int [] arr, int left, int right) {
+        if (arr == null || arr.length <= 1) {
+            return arr;
+        }
+        if (left < right) {
+            int mid = left + (right - left) / 2;
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+//            merge(arr, left, right);
+            return arr;
+        }
+        return new int[0];
+    }
+
+//    public int [] merge(int [] arr, int left, int right) {
+//        if (right == left) {
+//            return
+//        }
+//    }
+
+
+    public void mergeSortSavingMemory(int[] arr, int[] helper, int left, int mid, int right) {
+        for (int i = left; i <= right; i++) {
+            helper[i] = arr[i];
+        }
+        int leftIndex = left;
+        int rightIndex = mid + 1;
+        while (leftIndex <= mid && rightIndex <= right) {
+            if (helper[leftIndex] <= helper[rightIndex]) {
+                arr[left++] = helper[leftIndex++];
+            } else {
+                arr[left++] = helper[rightIndex++];
+            }
+        }
+        while (leftIndex <= mid) {
+            arr[left++] = helper[leftIndex++];
+        }
+    }
+
     public static void main(String[] args){
 //        int[][] mat1 = new int[][] {{1,1,0,0,0},{1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}};
 ////        int k1 = 3;
